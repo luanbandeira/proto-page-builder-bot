@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// PCDConnect custom colors
+				"pcd-primary": "#26B894",
+				"pcd-purple": "#9B4F96",
+				"pcd-orange": "#F7941D",
+				"pcd-blue": "#2B7CBA",
+				"pcd-green": "#8DC63F",
+				"pcd-light-blue": "#A5DEF8",
+				"pcd-light-green": "#D4F7EC",
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

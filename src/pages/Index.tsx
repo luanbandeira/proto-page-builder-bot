@@ -1,13 +1,27 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import AppLayout from "../components/AppLayout";
 
 const Index = () => {
+  const navigate = useNavigate();
+  
+  useEffect(() => {
+    // Auto navigate to user type selection after a short delay
+    const timer = setTimeout(() => {
+      navigate("/user-type");
+    }, 2000);
+    
+    return () => clearTimeout(timer);
+  }, [navigate]);
+  
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <AppLayout showNav={false}>
+      <div className="min-h-screen flex flex-col items-center justify-center bg-pcd-primary p-4">
+        <img src="/pcd-logo.svg" alt="PCDConnect Logo" className="w-32 h-32 mb-6" />
+        <h1 className="text-3xl font-bold text-center text-gray-800 mb-2">PCDConnect</h1>
       </div>
-    </div>
+    </AppLayout>
   );
 };
 
